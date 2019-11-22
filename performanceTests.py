@@ -57,6 +57,16 @@ def runTestCase(filename):
     except:
         print('insertionSort ikke implementeret. Springer over.')
 
+    try:
+        print('Starter heapSort')
+        tStart = time.time()
+        algo.heapSort(case)
+        tSlut = time.time()
+        caseResults['HeapSort'] = tSlut - tStart
+        print('HeapSort:', tSlut - tStart, 'sekunder')
+    except:
+        print('heapSort ikke implementeret. Springer over.')
+
     print('Starter Timsort')
     tStart = time.time()
     case.sort()
